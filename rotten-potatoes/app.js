@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 var exphbs = require('express-handlebars');
 
-
 mongoose.connect('mongodb://localhost/rotten-potatoes', { useMongoClient: true });
 
 // const Review = require('./models/review')
@@ -29,7 +28,8 @@ app.get('/', (req, res) => {
     })
 })
 
-
 app.listen(3000, () => {
     console.log('App listening on port 3000!');
 })
+
+module.exports = app
