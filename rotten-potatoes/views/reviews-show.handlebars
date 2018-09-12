@@ -2,15 +2,24 @@
 
 <a href="/">Back to Home</a>
 
-<h1>{{review.title}}</h1>
-<h2>{{review.reviewTitle}}</h2>
-<h3>Rating:</h3>
-<h3>{{review.rating}}</h3>
-<p>{{review.description}}</p>
+<div class="Row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <h1>{{review.title}}</h1>
+        <h2>{{review.reviewTitle}}</h2>
+        <h3>Rating:</h3>
+        <h3>{{review.rating}}</h3>
+        <p>{{review.description}}</p>   
 
-<p><a href="/reviews/{{review._id}}/edit">Edit</a></p>
+        <!-- Edit button -->
+        <p><a href="/reviews/{{review._id}}/edit">Edit</a></p>
 
-<!-- Delete button -->
-<p><form method="POST" action="/reviews/{{review._id}}?_method=DELETE">
-    <button type="submit">Delete</button>
-</form></p>
+        <!-- Delete button -->
+        <p><form method="POST" action="/reviews/{{review._id}}?_method=DELETE">
+            <button type="submit">Delete</button>
+        </form></p>
+    </div>
+</div>
+
+
+
+
