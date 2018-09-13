@@ -9,8 +9,8 @@ const ReviewSchema = new mongoose.Schema ({
     updateAt: {type: Date},
 
     title: {
-        type: String,
-        required: true
+        type: String
+        // required: true
     },
     description: {
         type: String

@@ -75,10 +75,12 @@ describe("Reviews", () => {
 
     // Test post
     it('should create a single review on /reviews POST', (done) => {
+        console.log(sampleReview)
         chai.request(server)
             .post('/reviews')
             .send(sampleReview)
             .end((err, res) => {
+                if (err) {console.log(`ERROR: ${err}`)};
                 res.should.have.status(200);
                 res.should.be.html;
                 done();
